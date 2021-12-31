@@ -19,3 +19,10 @@ searchInputEl.addEventListener("blur", function () {
   // input요소에 입력할, html속성인 placeholder를 추가해주겠다! 는 라인
   searchInputEl.setAttribute("placeholder", "");
 });
+
+const badgeEl = document.querySelector("header .badges");
+//window -> 브라우저에 열려있는 하나의 탭을 의미
+// 브라우저 창이라고 보면 된다. 윈도우 객체. 브라우저가 갖고 있는 여러 명령들을 가지고 있음.
+window.addEventListener("scroll", function () {
+  console.log("scroll!");
+})
