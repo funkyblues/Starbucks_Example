@@ -23,6 +23,26 @@ searchInputEl.addEventListener("blur", function () {
 const badgeEl = document.querySelector("header .badges");
 //window -> 브라우저에 열려있는 하나의 탭을 의미
 // 브라우저 창이라고 보면 된다. 윈도우 객체. 브라우저가 갖고 있는 여러 명령들을 가지고 있음.
-window.addEventListener("scroll", function () {
-  console.log("scroll!");
-})
+window.addEventListener("scroll", _.throttle(function () {
+  console.log(window.scrollY);
+  if (window.scrollY > 500) {
+    // 웹사이트 만들 때 gsap의 에니메이션 효과는 많이 쓴다고 하네
+    // 뱃지 숨기기
+    // 선택한 badgeEl에 style 속성을 사용할 수 있음. 현재 display: none을 적용한 상태!
+    // gsap에서 제공하는 에니메이션 처리 방법
+    // gsap.to(요소, 지속시간, 옵션);
+    // 그러나 시각적으로만 사라진 것이고 실제로는 그대로 있다.
+    gsap.to(badgeEl, 0.6, {
+      opacity: 0,
+      display: "none"
+    });
+  }
+  else {
+    // 뱃지 보여주기
+    gsap.to(badgeEl, 0.6, {
+      opacity: 1,
+      display: "block"
+    });
+  }
+}, 300)); //0.3초. 300ms
+// _.throttle(함수, 시간) => 함수에 쓰로틀링 건다는 느낌.
