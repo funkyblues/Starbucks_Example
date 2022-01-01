@@ -35,6 +35,7 @@ header {
   화면에 보이는 정도의 최소한으로 사용하려 함. 
   position: fixed, absolute 에서 발생한다. 해서 width: 100%를 넣어주는 것이 필요하다*/
   position: fixed;
+  top: 0;
 }
 /* header의 자식 class="inner"만 height가 120px입니다! 라는 뜻 */
 header > .inner {
@@ -229,4 +230,46 @@ header .badges .badge {
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+
+/* VISUAL */
+
+.visual {
+  margin-top: 120px;
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+}
+
+.visual .inner {
+  height: 646px;
+  background-color: orange;
+}
+
+.visual .title {
+
+}
+
+.visual .title .btn {
+
+}
+
+.visual .cup1.image {
+
+}
+
+.visual .cup1.text {
+
+}
+
+.visual .cup2.image {
+
+}
+
+.visual .cup2.text {
+
+}
+
+.visual .spoon {
+
 }

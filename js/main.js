@@ -26,7 +26,7 @@ const badgeEl = document.querySelector("header .badges");
 window.addEventListener("scroll", _.throttle(function () {
   console.log(window.scrollY);
   if (window.scrollY > 500) {
-    // 웹사이트 만들 때 gsap의 에니메이션 효과는 많이 쓴다고 하네
+    // 웹사이트 만들 때 gsap의 에니메이션 효과는 많이 쓴다고 함
     // 뱃지 숨기기
     // 선택한 badgeEl에 style 속성을 사용할 수 있음. 현재 display: none을 적용한 상태!
     // gsap에서 제공하는 에니메이션 처리 방법
