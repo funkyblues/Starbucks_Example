@@ -387,6 +387,8 @@ header .badges .badge {
   height: 62px;
   /* 자식요소들이 div태그라서 아래로 정렬되므로, 왼->오 로 정렬될 수 있도록 수정 */
   display: flex;
+  z-index: 0;
+
 }
 
 .notice .notice-line .inner__left {
@@ -404,11 +406,22 @@ header .badges .badge {
   margin-right: 20px;
 }
 
-.notice .notice-line .inner__left .swiper-container {
+.notice .notice-line .inner__left .mySwiper {
   height: 62px;
   /* 최대한 width가 늘어나라는 의미의 값 */
   flex-grow: 1;
-  background-color: orange;
+}
+
+
+.notice .notice-line .inner__left .swiper-slide {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+
+.notice .notice-line .inner__left .swiper-slide a {
+  color: #fff;
+
 }
 
 .notice .notice-line .inner__left .notice-line__more {
