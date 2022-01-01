@@ -46,3 +46,16 @@ window.addEventListener("scroll", _.throttle(function () {
   }
 }, 300)); //0.3초. 300ms
 // _.throttle(함수, 시간) => 함수에 쓰로틀링 건다는 느낌.
+
+
+// fade-in 요소 4개임.
+const fadeEls = document.querySelectorAll(".visual .fade-in");
+fadeEls.forEach(function (fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    // 몇 초 뒤에 실행될 것인지!
+    // 처음 index는 0 이니까. 
+    // 갈 수록 서서히 나타나는 효과를 주고 싶은 것이기 때문에...
+    delay: (index + 1) * .7,
+    opacity: 1,
+  });
+});
