@@ -473,13 +473,28 @@ header .badges .badge {
 .notice .promotion .mySwiper{
   width: calc(819px * 3 + 20px);
   height: 553px;
-  background-color: orange;
-  text-align: center;
-  font-size: 200px;
   position: absolute;
   top: 40px;
   /* 위치를 50%로 하고, 요소를 왼쪽으로 당긴것이라고 생각하면 됨 
   오른쪽도 동일. 많이 사용하는 방식*/
   left: 50%;
   margin-left: calc((819px * 3 + 20px) / -2);
+}
+
+.notice .promotion .swiper-slide {
+  opacity: 0.5;
+  transition: opacity 1s;
+  position: relative;
+}
+
+.notice .promotion .swiper-slide-active {
+  opacity: 1;
+}
+
+.notice .promotion .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
