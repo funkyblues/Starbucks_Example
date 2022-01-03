@@ -86,3 +86,24 @@ new Swiper(".promotion .mySwiper", {
     nextEl: ".promotion .swiper-next",
   }
 });
+
+const promotionEl = document.querySelector(".promotion");
+const promotionToggleBtn = document.querySelector(".toggle-promotion");
+let isHidePromotion = false;
+
+// javascript에선 클래스 추가, 제거 정도로만 제어해서, 
+// 애니메이션이 보이고, 없어지고 하는 건 css가 해결할 수 있도록 해주는 것이 좋음!
+// transition 같은거는 css가... 
+// 조금 복잡할 수 있는 것들은 gsap으로 해결해야 겠지만...서도...
+
+promotionToggleBtn.addEventListener("click", function () {
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) {
+    // 프로모션 영역을 숨김 처리!
+    promotionEl.classList.add("hide");
+  }
+  else {
+    // 프로모션 영역 보이게 처리!
+    promotionEl.classList.remove("hide");
+  }
+})
