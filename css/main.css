@@ -527,7 +527,7 @@ header .badges .badge {
 .notice .promotion .swiper-next {
   width: 42px;
   height: 42px;
-  border: 2px solid #333;
+  border: 1px solid #333;
   border-radius: 50%;
   position: absolute;
   top: 300px;
@@ -537,7 +537,14 @@ header .badges .badge {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .4s
+  transition: .4s;
+  background-color: #FFF;
+  opacity: .8;
+}
+
+.notice .promotion .swiper-prev .material-icons,
+.notice .promotion .swiper-next .material-icons {
+  font-size: 28px;
 }
 
 .notice .promotion .swiper-prev {
