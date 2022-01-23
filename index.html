@@ -47,16 +47,26 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
+      integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- SWIPER! -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    
+
     <!-- YOUTUBE! -->
     <!-- <script defer src="js/youtube.js"></script> -->
 
@@ -322,11 +332,14 @@
                 </ul>
               </div>
               <div class="main-menu__itemContents__texture">
-                <h4>스타벅스 카드 등록하기</h4>
-                <p>카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요</p>
+                <div class="inner">
+                  <h4>스타벅스 카드 등록하기</h4>
+                  <p>
+                    카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요
+                  </p>
+                </div>
               </div>
             </div>
-            
 
             <div class="main-menu__itemContents"></div>
           </li>
@@ -365,10 +378,12 @@
                 </ul>
               </div>
               <div class="main-menu__itemContents__texture">
-                <h4>매장별 이벤트</h4>
-                <p>스타벅스의 매장 이벤트 정보를 확인 하실 수 있습니다.</p>
-                <h4>소셜 스타벅스</h4>
-                <p>다양한 스타벅스 SNS 채널을 통해 스타벅스를 만나보세요!</p>
+                <div class="inner">
+                  <h4>매장별 이벤트</h4>
+                  <p>스타벅스의 매장 이벤트 정보를 확인 하실 수 있습니다.</p>
+                  <h4>소셜 스타벅스</h4>
+                  <p>다양한 스타벅스 SNS 채널을 통해 스타벅스를 만나보세요!</p>
+                </div>
               </div>
             </div>
           </li>
@@ -387,18 +402,36 @@
     <!-- VISUAL -->
     <section class="visual">
       <div class="inner">
-
         <div class="title fade-in">
-          <img src="./images/visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS" />
+          <img
+            src="./images/visual_title.png"
+            alt="STARBUCKS DELIGHTFUL START TO THE YEARS"
+          />
           <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
         </div>
         <div class="fade-in">
-          <img src="./images/visual_cup1.png" alt="new OATMEAL LATTE" class="cup1 image" />
-          <img src="./images/visual_cup1_text.png" alt="오트밀 라떼" class="cup1 text" />
+          <img
+            src="./images/visual_cup1.png"
+            alt="new OATMEAL LATTE"
+            class="cup1 image"
+          />
+          <img
+            src="./images/visual_cup1_text.png"
+            alt="오트밀 라떼"
+            class="cup1 text"
+          />
         </div>
         <div class="fade-in">
-          <img src="./images/visual_cup2.png" alt="new STARBUCKS CARAMEL CRUMBLE MOCHA" class="cup2 image" />
-          <img src="./images/visual_cup2_text.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2 text" />
+          <img
+            src="./images/visual_cup2.png"
+            alt="new STARBUCKS CARAMEL CRUMBLE MOCHA"
+            class="cup2 image"
+          />
+          <img
+            src="./images/visual_cup2_text.png"
+            alt="스타벅스 카라멜 크럼블 모카"
+            class="cup2 text"
+          />
         </div>
         <div class="fade-in">
           <img src="./images/visual_spoon.png" alt="spoon" class="spoon" />
@@ -406,48 +439,48 @@
       </div>
     </section>
 
-
     <section class="notice">
-
       <div class="notice-line">
         <div class="bg-left"></div>
         <div class="bg-right"></div>
         <div class="inner">
-
           <div class="inner__left">
             <h2>공지사항</h2>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
+                  <a href="javascript:void(0)"
+                    >크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a
+                  >
                 </div>
                 <div class="swiper-slide">
-                  <a href="javascript:void(0)">[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a>
+                  <a href="javascript:void(0)"
+                    >[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a
+                  >
                 </div>
                 <div class="swiper-slide">
-                  <a href="javascript:void(0)">스타벅스커피 코리아 애플리케이션 버전 업데이트 안내</a>
+                  <a href="javascript:void(0)"
+                    >스타벅스커피 코리아 애플리케이션 버전 업데이트 안내</a
+                  >
                 </div>
                 <div class="swiper-slide">
-                  <a href="javascript:void(0)">[당첨자 발표] 뉴이어 전자영수증 이벤트</a>
+                  <a href="javascript:void(0)"
+                    >[당첨자 발표] 뉴이어 전자영수증 이벤트</a
+                  >
                 </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
             <a href="javascript:void(0)" class="notice-line__more">
-              <div class="material-icons">
-                add_circle
-              </div>
+              <div class="material-icons">add_circle</div>
             </a>
           </div>
           <div class="inner__right">
             <h2>스타벅스 프로모션</h2>
             <div class="toggle-promotion">
-              <div class="material-icons">
-                upload
-              </div>
+              <div class="material-icons">upload</div>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -455,40 +488,50 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./images/promotion_slide1.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+              <img
+                src="./images/promotion_slide1.jpg"
+                alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!"
+              />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide2.jpg" alt="기간 내 스타벅스 카드 e-Gift를 3만원 이상" />
+              <img
+                src="./images/promotion_slide2.jpg"
+                alt="기간 내 스타벅스 카드 e-Gift를 3만원 이상"
+              />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide3.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+              <img
+                src="./images/promotion_slide3.jpg"
+                alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!"
+              />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide4.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+              <img
+                src="./images/promotion_slide4.jpg"
+                alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!"
+              />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide5.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+              <img
+                src="./images/promotion_slide5.jpg"
+                alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!"
+              />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-prev">
-          <div class="material-icons">
-            arrow_back
-          </div>
+          <div class="material-icons">arrow_back</div>
         </div>
         <div class="swiper-next">
-          <div class="material-icons">
-            arrow_forward
-          </div>
+          <div class="material-icons">arrow_forward</div>
         </div>
       </div>
-
     </section>
 
     <!-- REWARDS -->
@@ -496,13 +539,11 @@
       <div class="bg-left"></div>
       <div class="bg-right"></div>
       <div class="inner">
-
         <div class="btn-group">
           <div class="btn btn--reverse sign-up">회원가입</div>
           <div class="btn sign-in">로그인</div>
           <div class="btn gift">e-Gift 선물하기</div>
         </div>
-
       </div>
     </section>
 
@@ -513,32 +554,45 @@
       </div>
       <div class="youtube__cover"></div>
       <div class="inner">
-        <img src="./images/floating1.png" alt="Icon" class="floating floating1" />
-        <img src="./images/floating2.png" alt="Icon" class="floating floating2" />
+        <img
+          src="./images/floating1.png"
+          alt="Icon"
+          class="floating floating1"
+        />
+        <img
+          src="./images/floating2.png"
+          alt="Icon"
+          class="floating floating2"
+        />
       </div>
     </section>
 
     <!-- SEASON PRODUCT -->
     <section class="season-product">
       <div class="inner">
-
-        <img src="./images/floating3.png" alt="Icon" class="floating floating3" />
+        <img
+          src="./images/floating3.png"
+          alt="Icon"
+          class="floating floating3"
+        />
         <img src="./images/season_product_image.png" alt="" class="product" />
         <div class="text-group">
           <img src="./images/season_product_text1.png" alt="" class="title" />
-          <img src="./images/season_product_text2.png" alt="" class="description" />
+          <img
+            src="./images/season_product_text2.png"
+            alt=""
+            class="description"
+          />
           <div class="more">
             <a href="javascript:void(0)" class="btn">자세히 보기</a>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- RESERVE COFFEE -->
     <section class="reserve-coffee">
       <div class="inner">
-
         <img src="./images/reserve_logo.png" alt="" class="reserve-logo" />
 
         <div class="text-group">
@@ -550,14 +604,11 @@
 
         <img src="./images/reserve_image.png" alt="" class="product" />
       </div>
-
-
     </section>
 
     <!-- PICK YOUR FAVORITE -->
     <section class="pick-your-favorite">
       <div class="inner">
-
         <div class="text-group">
           <img src="./images/favorite_text1.png" alt="" class="title" />
           <img src="./images/favorite_text2.png" alt="" class="description" />
@@ -565,9 +616,22 @@
             <a href="javascript:void(0)" class="btn btn--gold">자세히 보기</a>
           </div>
         </div>
-
       </div>
     </section>
 
+    <!-- RESERVE STORE -->
+    <section class="reserve--store">
+      <div class="inner">
+        <div class="medal">
+          <div class="front">
+            <img src="./images/reserve_store_medal_front.png" alt="" />
+          </div>
+          <div class="back">
+            <img src="./images/reserve_store_medal_back.png" alt="" />
+            <a href="javascript:void(0)" class="btn"> 매장안내 </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
