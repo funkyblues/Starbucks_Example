@@ -138,6 +138,13 @@ spyEls.forEach(function (spyEl) {
     // triggerHook : 내가 감시하는 요소가 viewport의 어떤지점에서 감시되었는가를 판단할 것인가라는 지정해주는 옵션
     // 이 감시하는 옵션을 통해 해당 요소가 화면에 보여진다고 판단이 되면, setClassToggle()을 실행.
   })
-    .setClassToggle()
-    .addTo();
+    // setClassToggle에는 인수를 2개 적어줄 수 있다.
+    // 1: class를 toggle할 요소
+    // 2: toggle할 클래스
+    .setClassToggle(spyEl, "show")
+    // 내부의 controller에 내용을 할당해서 실제 동작할 수 있는 구조로 만들어주는 것.
+    // 내부로직을 알지 못하면 이해하기 난해하지만... 일반적으로 외부에서 가져와 사용하는 js 라이브러리 들은 평소 구현하기
+    // 매우 어려운 부분들임.
+    // 시간을 들여 해당 내용을 충분히 이해하면 좋겠지만 대부분 그런 환경이 아니기 때문에, 최대한 라이브러리 문서에서 말하는대로 진행하는게 좋음.
+    .addTo(new ScrollMagic.Controller());
 });

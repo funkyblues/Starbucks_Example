@@ -86,6 +86,39 @@ a {
   border-color: #fff;
 }
 
+.back-to-position {
+  /* 현재 화면에 보이지 않는 투명 상태 */
+  opacity: 0;
+  /* show가 없는 상황에서 생기는 때 까지의 변환시간을 1초로 두겠다. */
+  transition: 1s;
+}
+
+.back-to-position.to-right {
+  transform: translateX(-150px);
+}
+
+.back-to-position.to-left {
+  transform: translateX(150px);
+}
+
+.show .back-to-position {
+  /* show 클래스가 추가되면 화면에 보이게 되는 상태 */
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.show .back-to-position.delay-0 {
+  transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
 /* HEADER */
 header {
   width: 100%;
