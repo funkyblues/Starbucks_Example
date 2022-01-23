@@ -23,39 +23,40 @@ searchInputEl.addEventListener("blur", function () {
 const badgeEl = document.querySelector("header .badges");
 //window -> 브라우저에 열려있는 하나의 탭을 의미
 // 브라우저 창이라고 보면 된다. 윈도우 객체. 브라우저가 갖고 있는 여러 명령들을 가지고 있음.
-window.addEventListener("scroll", _.throttle(function () {
-  console.log(window.scrollY);
-  if (window.scrollY > 500) {
-    // 웹사이트 만들 때 gsap의 에니메이션 효과는 많이 쓴다고 함
-    // 뱃지 숨기기
-    // 선택한 badgeEl에 style 속성을 사용할 수 있음. 현재 display: none을 적용한 상태!
-    // gsap에서 제공하는 에니메이션 처리 방법
-    // gsap.to(요소, 지속시간, 옵션);
-    // 그러나 시각적으로만 사라진 것이고 실제로는 그대로 있다.
-    gsap.to(badgeEl, 0.6, {
-      opacity: 0,
-      display: "none"
-    });
-  }
-  else {
-    // 뱃지 보여주기
-    gsap.to(badgeEl, 0.6, {
-      opacity: 1,
-      display: "block"
-    });
-  }
-}, 300)); //0.3초. 300ms
+window.addEventListener(
+  "scroll",
+  _.throttle(function () {
+    // console.log(window.scrollY);
+    if (window.scrollY > 500) {
+      // 웹사이트 만들 때 gsap의 에니메이션 효과는 많이 쓴다고 함
+      // 뱃지 숨기기
+      // 선택한 badgeEl에 style 속성을 사용할 수 있음. 현재 display: none을 적용한 상태!
+      // gsap에서 제공하는 에니메이션 처리 방법
+      // gsap.to(요소, 지속시간, 옵션);
+      // 그러나 시각적으로만 사라진 것이고 실제로는 그대로 있다.
+      gsap.to(badgeEl, 0.6, {
+        opacity: 0,
+        display: "none",
+      });
+    } else {
+      // 뱃지 보여주기
+      gsap.to(badgeEl, 0.6, {
+        opacity: 1,
+        display: "block",
+      });
+    }
+  }, 300)
+); //0.3초. 300ms
 // _.throttle(함수, 시간) => 함수에 쓰로틀링 건다는 느낌.
-
 
 // fade-in 요소 4개임.
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach(function (fadeEl, index) {
   gsap.to(fadeEl, 1, {
     // 몇 초 뒤에 실행될 것인지!
-    // 처음 index는 0 이니까. 
+    // 처음 index는 0 이니까.
     // 갈 수록 서서히 나타나는 효과를 주고 싶은 것이기 때문에...
-    delay: (index + 1) * .7,
+    delay: (index + 1) * 0.7,
     opacity: 1,
   });
 });
@@ -68,32 +69,31 @@ new Swiper(".notice-line .mySwiper", {
   loop: true,
 });
 
-
 new Swiper(".promotion .mySwiper", {
   slidesPerView: 3, // 한번에 보여 줄 슬라이드 개수
   spaceBetween: 10, // 슬라이드 사이 여백
   centeredSlides: true, // 1번 슬라이드가 가운데 보이기!
   loop: true,
   autoplay: {
-    delay: 5000
+    delay: 5000,
   },
   pagination: {
     el: ".promotion .swiper-pagination", // 페이지 번호 요소 선택자
-    clickable: true // 사용자의 페이지 번호 요소 제어 가능 여부
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
   },
   navigation: {
     prevEl: ".promotion .swiper-prev",
     nextEl: ".promotion .swiper-next",
-  }
+  },
 });
 
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
 let isHidePromotion = false;
 
-// javascript에선 클래스 추가, 제거 정도로만 제어해서, 
+// javascript에선 클래스 추가, 제거 정도로만 제어해서,
 // 애니메이션이 보이고, 없어지고 하는 건 css가 해결할 수 있도록 해주는 것이 좋음!
-// transition 같은거는 css가... 
+// transition 같은거는 css가...
 // 조금 복잡할 수 있는 것들은 gsap으로 해결해야 겠지만...서도...
 
 promotionToggleBtn.addEventListener("click", function () {
@@ -101,17 +101,15 @@ promotionToggleBtn.addEventListener("click", function () {
   if (isHidePromotion) {
     // 프로모션 영역을 숨김 처리!
     promotionEl.classList.add("hide");
-  }
-  else {
+  } else {
     // 프로모션 영역 보이게 처리!
     promotionEl.classList.remove("hide");
   }
-})
+});
 
 function random(min, max) {
   return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
-
 
 function floatingObject(selector, delay, size) {
   // gsap.to(요소, 시간, 옵션);
@@ -125,5 +123,21 @@ function floatingObject(selector, delay, size) {
 }
 
 floatingObject(".floating1", 1, 15);
-floatingObject(".floating2", .5, 15);
+floatingObject(".floating2", 0.5, 15);
 floatingObject(".floating3", 1.5, 20);
+
+const spyEls = document.querySelectorAll("section.scroll-spy");
+spyEls.forEach(function (spyEl) {
+  // Scene => ScrollMagic이라고 하는 Javascript Library를 통해 특정 요소를 감시하는 option을 지정해 주는 요소
+  // setClassToggle => html class 속성을 넣었다 뺐다 하는 역할을 함.
+  // ScrollMagic 라이브러리가 필요한 controller라는 개념의 내용을 추가하기 위해 addTo()가 필요한 것(?).
+  new ScrollMagic.Scene({
+    triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+    triggerHook: 0.8, // ScrollMagic 라이브러리는 viewport를 위(0)에서 시작해서 밑(1)에서 끝난다고 판단함
+    // 만약 내가 감시하려는 요소가 .8이라는 viewport지점에 걸리면 특정 내용이 실행이 된다는 이야기.
+    // triggerHook : 내가 감시하는 요소가 viewport의 어떤지점에서 감시되었는가를 판단할 것인가라는 지정해주는 옵션
+    // 이 감시하는 옵션을 통해 해당 요소가 화면에 보여진다고 판단이 되면, setClassToggle()을 실행.
+  })
+    .setClassToggle()
+    .addTo();
+});
