@@ -159,3 +159,6 @@ spyEls.forEach(function (spyEl) {
     // 시간을 들여 해당 내용을 충분히 이해하면 좋겠지만 대부분 그런 환경이 아니기 때문에, 최대한 라이브러리 문서에서 말하는대로 진행하는게 좋음.
     .addTo(new ScrollMagic.Controller());
 });
+
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear();
