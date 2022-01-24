@@ -38,11 +38,19 @@ window.addEventListener(
         opacity: 0,
         display: "none",
       });
+      // 버튼 보이기!
+      gsap.to("#to-top", 0.2, {
+        x: 0, // 버튼이 오른쪽으로 이동할 수 있도록!
+      });
     } else {
       // 뱃지 보여주기
       gsap.to(badgeEl, 0.6, {
         opacity: 1,
         display: "block",
+      });
+      // 버튼 숨기기!
+      gsap.to("#to-top", 0.2, {
+        x: 100, // 버튼이 오른쪽으로 이동할 수 있도록!
       });
     }
   }, 300)
@@ -50,6 +58,16 @@ window.addEventListener(
 // _.throttle(함수, 시간) => 함수에 쓰로틀링 건다는 느낌.
 
 // fade-in 요소 4개임.
+
+const toTopEl = document.querySelector("#to-top");
+toTopEl.addEventListener("click", function () {
+  // window객체는 페이지가 출력되고 있는 화면 자체. viewport.
+  gsap.to(window, 0.7, {
+    // 0.7초 동안 0의 위치로 가겠다.
+    scrollTo: 0,
+  });
+});
+
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach(function (fadeEl, index) {
   gsap.to(fadeEl, 1, {
